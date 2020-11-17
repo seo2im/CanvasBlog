@@ -17,7 +17,7 @@ function Canvas () {
 	}
 
 	const addPoint = () => {
-		setPoints([{clear : 0, x : event.offsetX, y : event.offsetY, w : 20, h : 20}, ...points]);
+		setPoints([{x : event.offsetX, y : event.offsetY, w : 20, h : 20}, ...points]);
 	}
 
 	useEffect(() => {
@@ -25,7 +25,7 @@ function Canvas () {
 		ctx = canvas.getContext('2d');
 		Draw(ctx, points);
 
-		const anim = setInterval(() => {
+		const anim = setTimeout(() => {
 			setPoints(points.map(point => {
 				let { w, h } = point;
 				w = w < 0.5 ? 0 : w * 0.9;
