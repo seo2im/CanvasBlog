@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-import Canvas from './Test/canvas.js'
+import ClickDisapear from './Drawing/ClickDisapear'
+import DragDrawing from './Drawing/DragDrawing' 
 
 function App () {
 	return (
 		<div>
-			<p>Canvas</p>
-			<Canvas />
+			
+			<h2>DragDrawing</h2>
+			<DragDrawing />
 		</div>
 	)
 }

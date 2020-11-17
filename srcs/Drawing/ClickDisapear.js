@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createRef } from 'react'
 
-function Canvas () {
+function ClickDisapear () {
 	const [ points, setPoints ] = useState([]);
 
 	let canvas;
@@ -50,4 +50,4 @@ function Canvas () {
 	)
 }
 
-export default Canvas;
+export default ClickDisapear;
