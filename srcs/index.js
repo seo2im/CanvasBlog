@@ -5,12 +5,13 @@ import ClickDisapear from './Drawing/ClickDisapear'
 import DragDrawing from './Drawing/DragDrawing' 
 import pointShot from './Drawing/PointShot'
 import PointShot from './Drawing/PointShot'
+import DragBox from './Drawing/DragBox'
 
 function App () {
 	return (
 		<div>
-			<h2>PointShot</h2>
-			<PointShot />
+			<h2>DragBox</h2>
+			<DragBox />
 		</div>
 	)
 }

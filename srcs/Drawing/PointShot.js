@@ -98,6 +98,8 @@ function PointShot () {
 	)
 }
 
+export default PointShot;
+
 /*
 	/ This is sample draw & anim same Effect, it make problem /
 
@@ -123,4 +125,3 @@ function PointShot () {
 	}, [points])
 	*/
 
-export default PointShot;
