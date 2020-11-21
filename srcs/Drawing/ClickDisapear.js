@@ -44,7 +44,7 @@ function ClickDisapear () {
 		<div >
 			<canvas 
 				style={{border : "2px solid blue"}}
-				ref={canvasRef} width="400" height="300"
+				ref={canvasRef} width="400px" height="300px"
 				onClick={addPoint}/>
 		</div>
 	)

@@ -9,3 +9,7 @@ This project makes blog for canvas animation browser.
 ### setInterval in useEffect
 
 `useEffect` called everytime states are changed (or setting states are changed)
+
+### Use Effect split (-> PointShot check)
+
+Draw and anim must be splited. it same time, work hardly draw (like cluple)
