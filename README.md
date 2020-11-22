@@ -13,3 +13,7 @@ This project makes blog for canvas animation browser.
 ### Use Effect split (-> PointShot check)
 
 Draw and anim must be splited. it same time, work hardly draw (like cluple)
+
+###  Canvas vs Css clipping
+css clipping is better to styling...
+canvas use in animation is better

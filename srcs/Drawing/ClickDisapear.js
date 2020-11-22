@@ -10,22 +10,28 @@ function ClickDisapear () {
 	const Draw = (ctx, points) => {
 		points.forEach(point => {
 			const {x, y, w, h} = point;
-			ctx.clearRect(x, y, w * (1 / 0.85) + 0.5, h * (1 / 0.85) + 0.5);
+			
 			if (w > 0.5)
-				ctx.fillRect(x, y, w, h);
+				ctx.fillRect(x - w/2, y - w/2, w * 2, h * 2);
 		})
 	}
 
-	const addPoint = () => {
-		setPoints([{x : event.offsetX, y : event.offsetY, w : 20, h : 20}, ...points]);
+	const addPoint = ({clientX, clientY}) => {
+		canvas = canvasRef.current;
+		ctx = canvas.getContext('2d');
+		const rect = canvas.getBoundingClientRect();
+		setPoints([{x : clientX - rect.left, y : clientY - rect.top, w : 20, h : 20}, ...points]);
 	}
 
 	useEffect(() => {
 		canvas = canvasRef.current;
 		ctx = canvas.getContext('2d');
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		Draw(ctx, points);
+	}, [points]);
 
-		const anim = setTimeout(() => {
+	useEffect(() => {
+		const anim = setInterval(() => {
 			setPoints(points.map(point => {
 				let { w, h } = point;
 				w = w < 0.5 ? 0 : w * 0.9;
@@ -37,8 +43,8 @@ function ClickDisapear () {
 			}).filter(e => e !== null));
 		}, 100);
 
-		return _ => clearInterval(anim);
-	}, [points]);
+		return () => clearInterval(anim);;
+	}, [points])
 
 	return (
 		<div >
