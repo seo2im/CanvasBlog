@@ -1,5 +1,5 @@
 import React, { createRef, useState, useEffect } from 'react'
-import { Vec2d } from '../Math/Vec2d'
+import Vec2d from '../Math/Vec2d'
 
 function PointShot () {
 	const [ points, setPoints ] = useState([]);

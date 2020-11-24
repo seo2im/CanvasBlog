@@ -1,11 +1,11 @@
-export class Vec2d {
+class Vec2d {
 	constructor (x, y) {
 		this.x = x;
 		this.y = y;
 	}
 
-	add(vec) {
-		return new Vec2d(this.x + vec.x, this.y + vec.y)
+	add(x, y) {
+		return new Vec2d(this.x + x, this.y + y);
 	}
 
 	sub(vec) {
@@ -49,3 +49,5 @@ export const sub = (v1, v2) => {
 export const dot = (v1, v2) => {
 	return (v1.x * v2.x + v1.y * v2.y) / (v1.len() + v2.len())
 }
+
+export default Vec2d;
